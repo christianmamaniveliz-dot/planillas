@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Steelweld - Registro Contratistas (Demo)</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Steelweld — Registro diario (Demo)</h1>
+  </header>
+  <main>
+    <section id="menu">
+      <button id="btn-personal">Registrar Personal</button>
+      <button id="btn-registro">Registro Diario</button>
+      <button id="btn-preview">Previsualizar / Enviar</button>
+      <button id="btn-duplicar">Duplicar Día Anterior</button>
+    </section>
+
+    <section id="panel-personal" class="panel hidden">
+      <h2>Registro de Personal</h2>
+      <form id="form-personal">
+        <input id="p-nombre" placeholder="Nombre completo" required />
+        <input id="p-ci" placeholder="CI" required />
+        <input id="p-cargo" placeholder="Cargo" />
+        <select id="p-empresa"><option>Steelweld</option></select>
+        <button type="submit">Guardar</button>
+      </form>
+      <div id="lista-personal"></div>
+    </section>
+
+    <section id="panel-registro" class="panel hidden">
+      <h2>Registro Diario</h2>
+      <label>Fecha: <input type="date" id="r-fecha" /></label>
+      <label>Sección:
+        <select id="r-seccion">
+          <option>Horno Rotatorio FLS 1</option>
+          <option>Trituración de Caliza 1</option>
+          <option>Molienda Polvo Crudo 1</option>
+        </select>
+      </label>
+      <label><input type="checkbox" id="r-feriado" /> Feriado / Domingo</label>
+      <div id="lista-trabajadores"></div>
+      <button id="guardar-registro">Guardar Registro</button>
+    </section>
+
+    <section id="panel-preview" class="panel hidden">
+      <h2>Previsualización</h2>
+      <div id="preview-table"></div>
+      <div class="actions">
+        <button id="export-json">Descargar .json</button>
+        <button id="export-csv">Exportar CSV (formato SOBOCE demo)</button>
+        <button id="send-demo">Simular Envío</button>
+      </div>
+    </section>
+
+    <footer>
+      <small>Demo PWA — Datos guardados localmente en tu navegador.</small>
+    </footer>
+  </main>
+<script src="app.js"></script>
+</body>
+</html>

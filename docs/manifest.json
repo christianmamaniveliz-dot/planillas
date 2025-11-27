@@ -1,7 +1,8 @@
 {
   "name": "Steelweld Registro Contratistas (Demo)",
   "short_name": "Steelweld",
-  "start_url": "/index.html",
+  "start_url": "/planillas/index.html",
+  "scope": "/planillas/",
   "display": "standalone",
   "background_color": "#f4fbf9",
   "theme_color": "#0b6d44",
@@ -16,5 +17,6 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ]
+  ],
+  "prefer_related_applications": false
 }
